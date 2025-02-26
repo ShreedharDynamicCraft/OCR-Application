@@ -61,7 +61,12 @@ app.post("/upload", upload.single("image"), async (req, res) => { // ✅ FIXED: 
 });
 
 // Start Server
-const PORT = process.env.PORT || 5001;
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-});
+
+
+// const PORT = process.env.PORT || 5001;
+// app.listen(PORT, () => {
+//   console.log(`🚀 Server running on http://localhost:${PORT}`);
+// });
+
+
+module.exports = app; // ✅ Export app for Vercel

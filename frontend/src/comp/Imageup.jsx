@@ -31,8 +31,13 @@ function Imageup({ setExtractedText, setShowImageUploader }) {
 
     setLoading(true);
     try {
-      const response = await axios.post(
-        "http://localhost:5001/upload",
+    //   const response = await axios.post(
+    //     "http://localhost:5001/upload",
+
+
+    const response = await axios.post(
+        "https://ocr-backend.vercel.app/upload", // ✅ Use your new Vercel backend URL
+      
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
